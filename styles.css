@@ -1,8 +1,244 @@
-:root{font-family:"Segoe UI",Arial,sans-serif;color:#1c3143;background:#f2f6f8;--navy:#193348;--sky:#dceef2;--teal:#277d78;--line:#dfe8eb;--muted:#71838d}
-*{box-sizing:border-box}body{margin:0}header{height:74px;padding:0 7vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fbfdfe}.logo{text-decoration:none;color:var(--navy);font-size:17px;font-weight:700;letter-spacing:-.05em;display:flex;align-items:center;gap:9px}.logo-mark{display:grid;place-items:center;width:30px;height:30px;background:var(--navy);color:#fff;border-radius:50%;font:600 13px Georgia}.logo small{font:500 8px "Consolas";letter-spacing:.13em;color:#9aaab0;margin-left:5px}.private-note,.eyebrow,.filter-title,.result-count,footer{font:500 9px "Consolas",monospace;letter-spacing:.12em}.private-note{color:#7b939b}
-main{max-width:1130px;margin:auto;padding:0 7vw}.hero{padding:76px 0 54px}.eyebrow{color:var(--teal);margin:0 0 15px}.hero h1{font:700 clamp(42px,6.5vw,72px)/1.02 Georgia,serif;letter-spacing:-.06em;margin:0}.hero h1 em{color:var(--teal);font-style:normal}.hero>p:not(.eyebrow){max-width:540px;color:#71838d;line-height:1.7;font-size:14px}.search{margin-top:24px;display:flex;align-items:center;gap:12px;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:0 14px;height:48px;color:var(--teal)}.search input{width:100%;border:0;outline:0;background:transparent;font:13px "Segoe UI";color:var(--navy)}.search:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px #277d7818}
-.catalog{display:grid;grid-template-columns:180px 1fr;gap:40px;border-top:1px solid var(--line);padding:32px 0 64px}.filter-title{color:#93a5ac;margin:0 0 13px}.category{width:100%;display:flex;justify-content:space-between;border:0;background:transparent;padding:11px 10px;text-align:left;color:#73858e;border-radius:6px;font-size:12px;cursor:pointer}.category span{font:10px "Consolas";color:#a7b5ba}.category.selected{background:#dfefec;color:var(--teal);font-weight:600}.category:focus-visible{outline:2px solid var(--teal)}
-.result-count{color:#8c9da3;margin:0 0 15px;font-size:8px}.articles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.article{background:white;border:1px solid var(--line);border-radius:10px;padding:20px;min-height:180px;transition:transform .15s,box-shadow .15s}.article:hover{transform:translateY(-2px);box-shadow:0 12px 25px #1933480d}.article[hidden]{display:none}.article-meta{display:flex;justify-content:space-between;gap:10px;color:var(--teal);font:500 8px "Consolas";letter-spacing:.08em}.article time{color:#a2afb4}.article h2{font:600 17px Georgia;margin:17px 0 8px}.article p{font-size:11px;line-height:1.7;color:#76878f;margin:0}.empty{color:var(--muted);font-size:13px}
-footer{color:#99a9ae;font-size:8px;border-top:1px solid var(--line);padding:20px 0 30px}
-@media(max-width:700px){header{padding:0 20px}.logo small{display:none}.private-note{font-size:7px}main{padding:0 20px}.hero{padding:52px 0 36px}.catalog{grid-template-columns:1fr;gap:20px}.catalog aside{display:flex;align-items:center;gap:5px;flex-wrap:wrap}.filter-title{width:100%}.category{width:auto;gap:12px}.articles{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.article{transition:none}}
+﻿:root {
+  font-family:"Segoe UI",Arial,sans-serif;
+  color:#1c3143;
+  background:#f2f6f8;
+  --azul-marinho:#193348;
+  --ceu:#dceef2;
+  --verde-azulado:#277d78;
+  --linha:#dfe8eb;
+  --suave:#71838d
+}
+* {
+  box-sizing:border-box
+}
+body {
+  margin:0
+}
+header {
+  height:74px;
+  padding:0 7vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--linha);
+  background:#fbfdfe
+}
+.marca {
+  text-decoration:none;
+  color:var(--azul-marinho);
+  font-size:17px;
+  font-weight:700;
+  letter-spacing:-.05em;
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.simbolo-marca {
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  background:var(--azul-marinho);
+  color:#fff;
+  border-radius:50%;
+  font:600 13px Georgia
+}
+.marca small {
+  font:500 8px "Consolas";
+  letter-spacing:.13em;
+  color:#9aaab0;
+  margin-left:5px
+}
+.nota-demonstracao,.sobretitulo,.titulo-filtro,.total-resultados,footer {
+  font:500 9px "Consolas",monospace;
+  letter-spacing:.12em
+}
+.nota-demonstracao {
+  color:#7b939b
+}
+main {
+  max-width:1130px;
+  margin:auto;
+  padding:0 7vw
+}
+.destaque {
+  padding:76px 0 54px
+}
+.sobretitulo {
+  color:var(--verde-azulado);
+  margin:0 0 15px
+}
+.destaque h1 {
+  font:700 clamp(42px,6.5vw,72px)/1.02 Georgia,serif;
+  letter-spacing:-.06em;
+  margin:0
+}
+.destaque h1 em {
+  color:var(--verde-azulado);
+  font-style:normal
+}
+.destaque>p:not(.sobretitulo) {
+  max-width:540px;
+  color:#71838d;
+  line-height:1.7;
+  font-size:14px
+}
+.busca {
+  margin-top:24px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  max-width:560px;
+  background:#fff;
+  border:1px solid var(--linha);
+  border-radius:9px;
+  padding:0 14px;
+  height:48px;
+  color:var(--verde-azulado)
+}
+.busca input {
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  font:13px "Segoe UI";
+  color:var(--azul-marinho)
+}
+.busca:focus-within {
+  border-color:var(--verde-azulado);
+  box-shadow:0 0 0 3px #277d7818
+}
+.catalogo {
+  display:grid;
+  grid-template-columns:180px 1fr;
+  gap:40px;
+  border-top:1px solid var(--linha);
+  padding:32px 0 64px
+}
+.titulo-filtro {
+  color:#93a5ac;
+  margin:0 0 13px
+}
+.categoria {
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  border:0;
+  background:transparent;
+  padding:11px 10px;
+  text-align:left;
+  color:#73858e;
+  border-radius:6px;
+  font-size:12px;
+  cursor:pointer
+}
+.categoria span {
+  font:10px "Consolas";
+  color:#a7b5ba
+}
+.categoria.selecionado {
+  background:#dfefec;
+  color:var(--verde-azulado);
+  font-weight:600
+}
+.categoria:focus-visible {
+  outline:2px solid var(--verde-azulado)
+}
+.total-resultados {
+  color:#8c9da3;
+  margin:0 0 15px;
+  font-size:8px
+}
+.artigos {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px
+}
+.artigo {
+  background:white;
+  border:1px solid var(--linha);
+  border-radius:10px;
+  padding:20px;
+  min-height:180px;
+  transition:transform .15s,box-shadow .15s
+}
+.artigo:hover {
+  transform:translateY(-2px);
+  box-shadow:0 12px 25px #1933480d
+}
+.artigo[hidden] {
+  display:none
+}
+.metadados-artigo {
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  color:var(--verde-azulado);
+  font:500 8px "Consolas";
+  letter-spacing:.08em
+}
+.artigo time {
+  color:#a2afb4
+}
+.artigo h2 {
+  font:600 17px Georgia;
+  margin:17px 0 8px
+}
+.artigo p {
+  font-size:11px;
+  line-height:1.7;
+  color:#76878f;
+  margin:0
+}
+.vazio {
+  color:var(--suave);
+  font-size:13px
+}
+footer {
+  color:#99a9ae;
+  font-size:8px;
+  border-top:1px solid var(--linha);
+  padding:20px 0 30px
+}
+@media(max-width:700px) {
+  header {
+    padding:0 20px
+  }
+  .marca small {
+    display:none
+  }
+  .nota-demonstracao {
+    font-size:7px
+  }
+  main {
+    padding:0 20px
+  }
+  .destaque {
+    padding:52px 0 36px
+  }
+  .catalogo {
+    grid-template-columns:1fr;
+    gap:20px
+  }
+  .catalogo aside {
+    display:flex;
+    align-items:center;
+    gap:5px;
+    flex-wrap:wrap
+  }
+  .titulo-filtro {
+    width:100%
+  }
+  .categoria {
+    width:auto;
+    gap:12px
+  }
+  .artigos {
+    grid-template-columns:1fr
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .artigo {
+    transition:none
+  }
+}

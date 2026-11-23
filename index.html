@@ -1,24 +1,25 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Protótipo local de catálogo e descoberta de conhecimento.">
-  <title>Atlas — Knowledge Hub</title>
+  <title>ACERVO — Central de conhecimento</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
 <body>
-  <header><a class="logo" href="#"><span class="logo-mark">A</span> atlas <small>KNOWLEDGE SPACE</small></a><span class="private-note">ESPAÇO DE DEMONSTRAÇÃO</span></header>
+  <header><a class="marca" href="#"><span class="simbolo-marca">A</span> acervo <small>ESPAÇO DO CONHECIMENTO</small></a><span class="nota-demonstracao">ESPAÇO DE DEMONSTRAÇÃO</span></header>
   <main>
-    <section class="hero"><p class="eyebrow">CONHECIMENTO QUE CIRCULA</p><h1>Encontre o que<br><em>ajuda a avançar.</em></h1><p>Um catálogo demonstrativo para organizar práticas, aprendizados e respostas recorrentes em equipes digitais.</p>
-      <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Busque um tema, prática ou pergunta..." aria-label="Buscar conhecimento"></label>
+    <section class="destaque"><p class="sobretitulo">CONHECIMENTO QUE CIRCULA</p><h1>Encontre o que<br><em>ajuda a avançar.</em></h1><p>Um catálogo demonstrativo para organizar práticas, aprendizados e respostas recorrentes em equipes digitais.</p>
+      <label class="busca"><span aria-hidden="true">⌕</span><input id="busca" type="search" placeholder="Busque um tema, uma prática ou uma pergunta..." aria-label="Buscar conhecimento"></label>
     </section>
-    <section class="catalog">
-      <aside><p class="filter-title">EXPLORAR</p><button class="category selected" data-category="all" aria-pressed="true">Todos <span>06</span></button><button class="category" data-category="produto" aria-pressed="false">Produto <span>02</span></button><button class="category" data-category="operacao" aria-pressed="false">Operação <span>02</span></button><button class="category" data-category="dados" aria-pressed="false">Dados <span>02</span></button></aside>
-      <div><p id="result-count" class="result-count" aria-live="polite"></p><div id="articles" class="articles"></div><p id="empty" class="empty" hidden>Nenhum conteúdo encontrado. Tente outra busca.</p></div>
+    <section class="catalogo">
+      <aside><p class="titulo-filtro">NAVEGAR</p><button class="categoria selecionado" data-categoria="todas" aria-pressed="true">Todos <span>06</span></button><button class="categoria" data-categoria="produto" aria-pressed="false">Produto <span>02</span></button><button class="categoria" data-categoria="operacao" aria-pressed="false">Operação <span>02</span></button><button class="categoria" data-categoria="dados" aria-pressed="false">Dados <span>02</span></button></aside>
+      <div><p id="total-resultados" class="total-resultados" aria-live="polite"></p><div id="artigos" class="artigos"></div><p id="vazio" class="vazio" hidden>Nenhum conteúdo encontrado. Tente outra busca.</p></div>
     </section>
-    <footer>ATLAS · CONTEÚDOS FICTÍCIOS PARA DEMONSTRAÇÃO · SEM SERVIÇOS EXTERNOS</footer>
+    <footer>ACERVO · CONTEÚDOS FICTÍCIOS PARA DEMONSTRAÇÃO · SEM SERVIÇOS EXTERNOS</footer>
   </main>
 </body>
 </html>
+
