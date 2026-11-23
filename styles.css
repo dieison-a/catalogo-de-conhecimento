@@ -4,9 +4,9 @@
   background:#f2f6f8;
   --azul-marinho:#193348;
   --ceu:#dceef2;
-  --verde-azulado:#277d78;
+  --verde-azulado:#1c625d;
   --linha:#dfe8eb;
-  --suave:#71838d
+  --suave:#52636d
 }
 * {
   box-sizing:border-box
@@ -46,7 +46,7 @@ header {
 .marca small {
   font:500 8px "Consolas";
   letter-spacing:.13em;
-  color:#9aaab0;
+  color:#56666b;
   margin-left:5px
 }
 .nota-demonstracao,.sobretitulo,.titulo-filtro,.total-resultados,footer {
@@ -54,7 +54,7 @@ header {
   letter-spacing:.12em
 }
 .nota-demonstracao {
-  color:#7b939b
+  color:#566b74
 }
 main {
   max-width:1130px;
@@ -79,7 +79,7 @@ main {
 }
 .destaque>p:not(.sobretitulo) {
   max-width:540px;
-  color:#71838d;
+  color:var(--suave);
   line-height:1.7;
   font-size:14px
 }
@@ -116,7 +116,7 @@ main {
   padding:32px 0 64px
 }
 .titulo-filtro {
-  color:#93a5ac;
+  color:var(--suave);
   margin:0 0 13px
 }
 .categoria {
@@ -127,14 +127,14 @@ main {
   background:transparent;
   padding:11px 10px;
   text-align:left;
-  color:#73858e;
+  color:var(--suave);
   border-radius:6px;
   font-size:12px;
   cursor:pointer
 }
 .categoria span {
   font:10px "Consolas";
-  color:#a7b5ba
+  color:#56666b
 }
 .categoria.selecionado {
   background:#dfefec;
@@ -145,7 +145,7 @@ main {
   outline:2px solid var(--verde-azulado)
 }
 .total-resultados {
-  color:#8c9da3;
+  color:var(--suave);
   margin:0 0 15px;
   font-size:8px
 }
@@ -178,7 +178,7 @@ main {
   letter-spacing:.08em
 }
 .artigo time {
-  color:#a2afb4
+  color:#56666b
 }
 .artigo h2 {
   font:600 17px Georgia;
@@ -187,7 +187,7 @@ main {
 .artigo p {
   font-size:11px;
   line-height:1.7;
-  color:#76878f;
+  color:var(--suave);
   margin:0
 }
 .vazio {
@@ -195,7 +195,7 @@ main {
   font-size:13px
 }
 footer {
-  color:#99a9ae;
+  color:var(--suave);
   font-size:8px;
   border-top:1px solid var(--linha);
   padding:20px 0 30px
